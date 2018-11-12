@@ -40,7 +40,7 @@ class ApiController extends AbstractController
     public function voteDislike(Request $request)
     {
         /**
-         * Dislike button'una tıklayınca buraya istek geliyor. Kedi'nin id'sine göre redis'te puanı +1 düşürülecek.
+         * Dislike button'una tıklayınca buraya istek geliyor. Kedi'nin id'sine göre redis'te puanı -1 düşürülecek.
          */
         $id = $request->get('id');
         $redis = $this->redis;
